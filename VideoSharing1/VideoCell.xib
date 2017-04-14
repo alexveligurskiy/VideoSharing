@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="276" id="8lk-qW-Skb" customClass="VideoCell" customModule="VideoSharing1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="276"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8lk-qW-Skb" id="Upp-6S-Con">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="275.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ik8-Sq-TEh">
+                        <rect key="frame" x="8" y="246.5" width="71.5" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="QlE-Wm-hOI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 likes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZu-CG-gut">
+                        <rect key="frame" x="273" y="246.5" width="39" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="XQZ-9k-v7M"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="25C-F6-zbb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="238.5"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="25C-F6-zbb" secondAttribute="trailing" id="0cv-7g-NUx"/>
+                    <constraint firstItem="gZu-CG-gut" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ik8-Sq-TEh" secondAttribute="trailing" priority="750" constant="10" id="1Vp-1T-biF"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="gZu-CG-gut" secondAttribute="bottom" constant="1" id="703-34-fZL"/>
+                    <constraint firstItem="gZu-CG-gut" firstAttribute="trailing" secondItem="Upp-6S-Con" secondAttribute="trailingMargin" id="AX4-B2-asb"/>
+                    <constraint firstItem="gZu-CG-gut" firstAttribute="top" secondItem="25C-F6-zbb" secondAttribute="bottom" constant="8" id="JSB-Pn-tpW"/>
+                    <constraint firstItem="Ik8-Sq-TEh" firstAttribute="top" secondItem="25C-F6-zbb" secondAttribute="bottom" constant="8" id="RS0-bK-jYu"/>
+                    <constraint firstItem="25C-F6-zbb" firstAttribute="top" secondItem="Upp-6S-Con" secondAttribute="top" id="YDi-Ay-gGx"/>
+                    <constraint firstItem="Ik8-Sq-TEh" firstAttribute="leading" secondItem="Upp-6S-Con" secondAttribute="leadingMargin" id="cXE-kA-aGt"/>
+                    <constraint firstItem="25C-F6-zbb" firstAttribute="leading" secondItem="Upp-6S-Con" secondAttribute="leading" id="gRo-4T-Muk"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Ik8-Sq-TEh" secondAttribute="bottom" constant="1" id="lyZ-xg-Ty5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="likesLabel" destination="gZu-CG-gut" id="Z56-rA-Lfn"/>
+                <outlet property="nameLabel" destination="Ik8-Sq-TEh" id="Rf3-qP-RDU"/>
+                <outlet property="videoPreview" destination="25C-F6-zbb" id="Fnl-xp-yfO"/>
+            </connections>
+            <point key="canvasLocation" x="391" y="212"/>
+        </tableViewCell>
+    </objects>
+</document>
